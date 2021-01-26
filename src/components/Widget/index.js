@@ -13,13 +13,13 @@ const Widget = styled.div`
 
   h1, h2, h3 {
     font-size: 115%;
-    font-weight: 2000;
+    font-weight: 1000;
     line-height: 1;
     margin-bottom: 0;
   }
   p {
     font-size: 100%;
-    font-weight: 1200;
+    font-weight: 900;
     line-height: 1;
   }
   button {
@@ -27,13 +27,13 @@ const Widget = styled.div`
     color: ${({ theme }) => theme.colors.contrastText};
     border-radius: 10px;
     font-size: 14px;
-    font-weight: 1500;
+    font-weight: 700;
   }
   input {
     color: ${({ theme }) => theme.colors.primary};
     border-radius: 10px;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 700;
 
   }
 `;
