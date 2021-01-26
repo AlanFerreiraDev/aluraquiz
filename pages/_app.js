@@ -41,21 +41,21 @@ export default function App({ Component, pageProps }) {
         <title>Quiz Curiosidades Séries e Filmes</title>
         <meta name="title" content="Quiz Curiosidades Séries e Filmes" />
         <meta name="description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta name="image" content="../meta/quizPipoca.png" />
+        <meta name="image" content="https://images6.alphacoders.com/692/692805.jpg" />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="og:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="og:description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta property="og:image" content="../meta/quizPipoca.png" />
+        <meta property="og:image" content="https://images6.alphacoders.com/692/692805.jpg" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="twitter:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="twitter:description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta property="twitter:image" content="../meta/quizPipoca.png" />
+        <meta property="twitter:image" content="https://images6.alphacoders.com/692/692805.jpg" />
 
         {/* <!-- Linkedin -->
         <meta property="linkedin:card" content="summary_large_image" />
