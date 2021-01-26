@@ -34,7 +34,7 @@ const Widget = styled.div`
     border-radius: 10px;
     font-size: 14px;
     font-weight: 400;
-
+    margin: 0 1em .5em 0;
   }
 `;
 
