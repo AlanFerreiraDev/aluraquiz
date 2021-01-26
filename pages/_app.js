@@ -41,21 +41,21 @@ export default function App({ Component, pageProps }) {
         <title>Quiz Curiosidades Séries e Filmes</title>
         <meta name="title" content="Quiz Curiosidades Séries e Filmes" />
         <meta name="description" content="" />
-        <meta name="og:image" content="https://images6.alphacoders.com/692/692805.jpg" />
+        <meta name="og:image" content="../docs/quizPipoca.png" />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="og:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="og:description" content="" />
-        <meta property="og:image" content="https://images6.alphacoders.com/692/692805.jpg" />
+        <meta property="og:image" content="../docs/quizPipoca.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="twitter:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="twitter:description" content="" />
-        <meta property="twitter:image" content="https://images6.alphacoders.com/692/692805.jpg" />
+        <meta property="twitter:image" content="../docs/quizPipoca.png" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
