@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable func-names */
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';// Esse import é direto do node_modules, não criamos nenhum cmponent para isso
@@ -35,32 +34,13 @@ export const QuizContainer = styled.div`
 export default function Home() {
   // Preciso antes iniciar esse hook para usá-lo na função abaixo
   const router = useRouter();
-  const name = 'Alan';
+  // Aqui usamos um hook do React, onde passamos o estado inicial do nosso state
+  // Sempre variavel,função
+  const [name, setName] = React.useState('');
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <QuizBackground backgroundImage={db.bg}>
-      <Head>
-        {/* <!-- Primary Meta Tags -->
-        <title>Quiz Curiosidades Séries e Filmes</title>
-        <meta name="title" content="Quiz Curiosidades Séries e Filmes" />
-        <meta name="description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta name="image" content="https://images6.alphacoders.com/692/692805.jpg" /> */}
-
-        {/* <!-- Open Graph / Facebook --> */}
-        {/* <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
-        <meta property="og:title" content="Quiz Curiosidades Séries e Filmes" />
-        <meta property="og:description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta property="og:image" content="https://images6.alphacoders.com/692/692805.jpg" /> */}
-
-        {/* <!-- Twitter --> */}
-        {/* <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
-        <meta property="twitter:title" content="Quiz Curiosidades Séries e Filmes" />
-        <meta property="twitter:description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta property="twitter:image" content="https://images6.alphacoders.com/692/692805.jpg" /> */}
-
-      </Head>
+      <Head />
       <QuizContainer>
         <QuizLogo />
         <Widget>
@@ -81,11 +61,18 @@ export default function Home() {
             }}
             >
               <p>{db.description}</p>
-              <input placeholder="Diz aí seu nome:" />
-              {/* Condição direta no diabled */}
+              <input
+                onChange={function (infosDoEvento) {
+                  // A função infosDoEvento carrega as informações do input
+                  // Passo para dentro da minha função o valor q quero mudar sempre
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="Diz aí seu nome:"
+              />
+              {/* Condição direta no disabled */}
               <button type="submit" disabled={name.length === 0}>
-                Jogar!
-                { `  ${name}` }
+                { `${name} ` }
+                Jogue !
               </button>
             </form>
           </Widget.Content>

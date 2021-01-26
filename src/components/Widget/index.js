@@ -12,15 +12,29 @@ const Widget = styled.div`
   overflow: hidden;
 
   h1, h2, h3 {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 115%;
+    font-weight: 2000;
     line-height: 1;
     margin-bottom: 0;
   }
   p {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 100%;
+    font-weight: 1200;
     line-height: 1;
+  }
+  button {
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.contrastText};
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 1500;
+  }
+  input {
+    color: ${({ theme }) => theme.colors.primary};
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 300;
+
   }
 `;
 
