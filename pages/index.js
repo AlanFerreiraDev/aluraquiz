@@ -34,7 +34,24 @@ export default function Home() {
     // eslint-disable-next-line react/jsx-filename-extension
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>Quiz Alura Planeta Terra</title>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Quiz Curiosidades Séries e Filmes</title>
+        <meta name="title" content="Quiz Curiosidades Séries e Filmes" />
+        <meta name="description" content="" />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
+        <meta property="og:title" content="Quiz Curiosidades Séries e Filmes" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
+        <meta property="twitter:title" content="Quiz Curiosidades Séries e Filmes" />
+        <meta property="twitter:description" content="" />
+        <meta property="twitter:image" content="" />
       </Head>
       <QuizContainer>
         <QuizLogo />
