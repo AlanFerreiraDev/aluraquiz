@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
 import styled from 'styled-components';
@@ -54,12 +55,12 @@ export default function Home() {
         <meta property="twitter:description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
         <meta property="twitter:image" content="../_docs.quizPipoca.png" />
 
-        {/* <!-- Linkedin --> */}
+        {/* <!-- Linkedin -->
         <meta property="linkedin:card" content="summary_large_image" />
         <meta property="linkedin:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="linkedin:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="linkedin:description" content="Uma Divertida Competição para Rankear quem sabe mais sobre Filmes e Séries !!!" />
-        <meta property="linkedin:image" content="../_docs.quizPipoca.png" />
+        <meta property="linkedin:image" content="../_docs.quizPipoca.png" /> */}
       </Head>
       <QuizContainer>
         <QuizLogo />
