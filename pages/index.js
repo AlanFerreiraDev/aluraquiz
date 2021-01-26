@@ -38,21 +38,21 @@ export default function Home() {
         <title>Quiz Curiosidades Séries e Filmes</title>
         <meta name="title" content="Quiz Curiosidades Séries e Filmes" />
         <meta name="description" content="" />
-        <meta name="og:image" content="../docs/quizPipoca.png" />
+        <meta name="image" content="../_docs.quizPipoca.png" />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="og:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="og:description" content="" />
-        <meta property="og:image" content="../docs/quizPipoca.png" />
+        <meta property="og:image" content="../_docs.quizPipoca.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
         <meta property="twitter:title" content="Quiz Curiosidades Séries e Filmes" />
         <meta property="twitter:description" content="" />
-        <meta property="twitter:image" content="../docs/quizPipoca.png" />
+        <meta property="twitter:image" content="../_docs.quizPipoca.png" />
       </Head>
       <QuizContainer>
         <QuizLogo />
