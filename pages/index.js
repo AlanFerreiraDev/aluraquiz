@@ -31,6 +31,7 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <QuizBackground backgroundImage={db.bg}>
       <Head>
         <title>Quiz Alura Planeta Terra</title>
