@@ -37,6 +37,24 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Quiz Curiosidades Séries e Filmes</title>
+        <meta name="title" content="Quiz Curiosidades Séries e Filmes" />
+        <meta name="description" content="" />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
+        <meta property="og:title" content="Quiz Curiosidades Séries e Filmes" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://aluraquiz.alanferreiradev.vercel.app/" />
+        <meta property="twitter:title" content="Quiz Curiosidades Séries e Filmes" />
+        <meta property="twitter:description" content="" />
+        <meta property="twitter:image" content="" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
