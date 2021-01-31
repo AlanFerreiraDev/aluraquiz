@@ -3715,6 +3715,11 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
+porp-types@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/porp-types/-/porp-types-0.0.1-security.tgz#924140cb786e03e54252fa1812c93d1cc240da6a"
+  integrity sha512-+cuPmgFZ4ooY94aSSBk1+WFtP5zcjySVmFPgUrV9GFdN6MOc0G/tDeRBRhpLMZIBG7M0w001PEGQK9xSPzVFFA==
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"

@@ -25,16 +25,10 @@ const Widget = styled.div`
   button {
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.contrastText};
-    border-radius: 10px;
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border-radius: 6px;
     font-size: 14px;
     font-weight: 300;
-  }
-  input {
-    color: ${({ theme }) => theme.colors.primary};
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0 1em .5em 0;
   }
 `;
 

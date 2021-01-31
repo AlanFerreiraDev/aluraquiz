@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable func-names */
 import React from 'react';
 import styled from 'styled-components';
@@ -10,7 +11,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
-
+import Input from '../src/components/Input';
 // <link rel="preconnect" href="https://fonts.gstatic.com">
 
 // const BackgroundImage = styled.div`
@@ -61,13 +62,13 @@ export default function Home() {
             }}
             >
               <p>{db.description}</p>
-              <input
-                onChange={function (infosDoEvento) {
+              <Input
+                onChange={(infosDoEvento) => {
                   // A função infosDoEvento carrega as informações do input
                   // Passo para dentro da minha função o valor q quero mudar sempre
                   setName(infosDoEvento.target.value);
                 }}
-                placeholder="Diz aí seu nome:"
+                placeholder="Diz aí seu nome ;)"
               />
               {/* Condição direta no disabled */}
               <button type="submit" disabled={name.length === 0}>

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "next": "latest",
+    "porp-types": "^0.0.1-security",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
