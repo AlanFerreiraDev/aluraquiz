@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/require-default-props */
 /* eslint-disable react/default-props-match-prop-types */
 /* eslint-disable react/prop-types */
 /* eslint-disable max-len */
@@ -29,6 +31,7 @@ export default function Input({ onChange, placeholder, ...props }) {
       <InputBase
         placeholder={placeholder}
         onChange={onChange}
+        {...props}
       />
     </div>
   );
@@ -38,12 +41,11 @@ Input.defaultProps = {
   value: '',
 };
 
-// Procurar depois no video o motivo da instalção dessa lb prop-types
 // Estou setando aqui que todos esses valores são Obrigatórios com o isRequired
 // E que são funções ou valores string
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  // value: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
