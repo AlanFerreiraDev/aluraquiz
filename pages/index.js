@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable import/order */
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable func-names */
 import React from 'react';
@@ -13,6 +15,9 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
+import Lottie from 'react-lottie';
+import animationData from '../src/animaton.json';
+
 // <link rel="preconnect" href="https://fonts.gstatic.com">
 
 // const BackgroundImage = styled.div`
