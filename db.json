@@ -5,7 +5,8 @@
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "",
+      "image1" : "https://media.giphy.com/media/WiM5K1e9MtEic/giphy.gif",
+      "title": "Qual a série Hacker mais amada entre os programadores ?",
       "description": "Essa é pra aquecer",
       "answer": 2,
       "alternatives": [

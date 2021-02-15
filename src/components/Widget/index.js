@@ -58,4 +58,11 @@ Widget.Content = styled.div`
   }
 `;
 
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => theme.colors.primary}40};
+  `;
+
 export default Widget;
