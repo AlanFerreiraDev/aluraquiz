@@ -32,6 +32,7 @@ function QuestionWidget({
   question,
   questionIndex,
   totalQuestions,
+  onSubmit,
 }) {
   const questionId = `question__${questionIndex}`;
   return (
@@ -59,7 +60,11 @@ function QuestionWidget({
           {question.description}
         </p>
 
-        <form>
+        <form onSubmit={(infosDoEvento) => {
+          infosDoEvento.preventDefault();
+          onSubmit();
+        }}
+        >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
             return (
@@ -89,11 +94,6 @@ function QuestionWidget({
   );
 }
 
-// [React chamade efeitos: \\ Effects]
-// nasce === didMounnt
-// atualizado === willUpdate
-// morre === willUnmount
-
 const screenStates = {
   QUIZ: 'QUIZ',
   LOADING: 'LOADING',
@@ -101,10 +101,33 @@ const screenStates = {
 };
 
 export default function QuizPage() {
-  const screenState = screenStates.QUIZ;
+  // Hook para mudançca de estado, o primeiro estado é em Loading
+  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const totalQuestions = db.questions.length;
-  const questionIndex = 0;
+  const [currentQuestion, setCurrentQuestion] = React.useState(0);
+  const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
+
+  // [React chamade efeitos: \\ Effects]
+  // atualizado === willUpdate
+  // morre === willUnmount
+  React.useEffect(() => {
+    // fetch ...
+    setTimeout(() => {
+      setScreenState(screenStates.QUIZ);
+    }, 1 * 1000);
+    // nasce === didMount
+  }, []);
+
+  function handleSubmitQuiz() {
+    const nextQuestion = questionIndex + 1;
+    if (nextQuestion < totalQuestions) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setScreenState(screenStates.RESULT);
+    }
+  }
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head />
@@ -115,6 +138,7 @@ export default function QuizPage() {
             question={question}
             questionIndex={questionIndex}
             totalQuestions={totalQuestions}
+            onSubmit={handleSubmitQuiz}
           />
         )}
         {/* Se screenState for igual a LOADING então mostrar o componente <LoadingWidget /> */}
