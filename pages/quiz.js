@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/style-prop-object */
@@ -32,6 +33,7 @@ function QuestionWidget({
   questionIndex,
   totalQuestions,
 }) {
+  const questionId = `question__${questionIndex}`;
   return (
     <Widget>
       <Widget.Header>
@@ -59,15 +61,16 @@ function QuestionWidget({
 
         <form>
           {question.alternatives.map((alternative, alternativeIndex) => {
-            const alternativeId = `alternativeId__${alternativeIndex}`;
+            const alternativeId = `alternative__${alternativeIndex}`;
             return (
-              <label htmlFor={alternativeId}>
-                {alternative}
+              <Widget.Topic as="label" htmlFor={alternativeId}>
                 <input
                   id={alternativeId}
+                  name={questionId}
                   type="radio"
                 />
-              </label>
+                {alternative}
+              </Widget.Topic>
             );
           })}
           {/* Dica valiosa para debug do JS
@@ -86,7 +89,19 @@ function QuestionWidget({
   );
 }
 
+// [React chamade efeitos: \\ Effects]
+// nasce === didMounnt
+// atualizado === willUpdate
+// morre === willUnmount
+
+const screenStates = {
+  QUIZ: 'QUIZ',
+  LOADING: 'LOADING',
+  RESULT: 'RESULT',
+};
+
 export default function QuizPage() {
+  const screenState = screenStates.QUIZ;
   const totalQuestions = db.questions.length;
   const questionIndex = 0;
   const question = db.questions[questionIndex];
@@ -95,12 +110,17 @@ export default function QuizPage() {
       <Head />
       <QuizContainer>
         <QuizLogo />
-        <QuestionWidget
-          question={question}
-          questionIndex={questionIndex}
-          totalQuestions={totalQuestions}
-        />
-        <LoadingWidget />
+        {screenState === screenStates.QUIZ && (
+          <QuestionWidget
+            question={question}
+            questionIndex={questionIndex}
+            totalQuestions={totalQuestions}
+          />
+        )}
+        {/* Se screenState for igual a LOADING então mostrar o componente <LoadingWidget /> */}
+        {screenState === screenStates.LOADING && <LoadingWidget />}
+
+        {screenState === screenStates.RESULT && <div>Você Acertou X Questões, Parabéns !!!!!</div>}
         <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/AlanFerreiraDev" />
