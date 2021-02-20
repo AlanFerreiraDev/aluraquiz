@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 /* eslint-disable react/prop-types */
@@ -34,7 +35,14 @@ function QuestionWidget({
   totalQuestions,
   onSubmit,
 }) {
+  // Primeiro estado em undefined, quando nenhum radio for selecionado
+  const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+  // State para saber se o form foi Submitado (clique no botão de radio)
+  const [isQuestionSubmited, setisQuestionSubmited] = React.useState(false);
   const questionId = `question__${questionIndex}`;
+  // isCorrect = State === Validação de dado do db.json
+  const isCorrect = selectedAlternative === question.answer;
+  const hasAlternativeSelected = selectedAlternative !== undefined;
   return (
     <Widget>
       <Widget.Header>
@@ -62,16 +70,27 @@ function QuestionWidget({
 
         <form onSubmit={(infosDoEvento) => {
           infosDoEvento.preventDefault();
-          onSubmit();
+          setisQuestionSubmited(true);
+          setTimeout(() => {
+            onSubmit();
+            setisQuestionSubmited(false);
+            setSelectedAlternative(undefined);
+          }, 3 * 1000);
         }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
             return (
-              <Widget.Topic as="label" htmlFor={alternativeId}>
+              <Widget.Topic
+                as="label"
+                key={alternativeId}
+                htmlFor={alternativeId}
+              >
                 <input
                   id={alternativeId}
                   name={questionId}
+                  // O alternativeIndex é o valor da resposta no db.json ...
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
                   type="radio"
                 />
                 {alternative}
@@ -85,9 +104,12 @@ function QuestionWidget({
           {/* <pre>
             {JSON.stringify(question, null, 4)}
           </pre> */}
-          <Button type="submit">
+          <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
+          {/* <p>selectedAlternative:{`${selectedAlternative}`}</p> */}
+          {isQuestionSubmited && isCorrect && <p>Você acertou !!!!</p>}
+          {isQuestionSubmited && !isCorrect && <p>Você errou !!!!</p>}
         </form>
       </Widget.Content>
     </Widget>
@@ -101,8 +123,10 @@ const screenStates = {
 };
 
 export default function QuizPage() {
-  // Hook para mudançca de estado, o primeiro estado é em Loading
-  const [screenState, setScreenState] = React.useState(screenStates.LOADING);
+  // Hook para mudançca de estado, o primeiro estado = primeira tela será a de RESULT
+  const [screenState, setScreenState] = React.useState(screenStates.RESULT);
+  // State para somar os pontos de acerto ou erro, começando com um array vazio
+  const [results, setResult] = React.useState([]);
   const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
@@ -114,7 +138,7 @@ export default function QuizPage() {
   React.useEffect(() => {
     // fetch ...
     setTimeout(() => {
-      setScreenState(screenStates.QUIZ);
+      // setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
     // nasce === didMount
   }, []);
