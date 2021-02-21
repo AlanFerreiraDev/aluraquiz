@@ -7,13 +7,39 @@
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "image1" : "https://media.giphy.com/media/WiM5K1e9MtEic/giphy.gif",
       "title": "Qual a série que lida com um ataque Hacker que apaga todas as dívidas da população mundial ?",
-      "description": "Essa é pra aquecer",
+      "description": "Para Nerds e Hackers de Plantão ...",
       "answer": 1,
       "alternatives": [
         "Silicon Valey",
         "Mr. Robot",
         "The IT Crowd",
         "Halt and Catch Fire"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/vbPzAifIrGycdxnvsO/giphy.gif",
+      "image1" : "https://media.giphy.com/media/vbPzAifIrGycdxnvsO/giphy.gif",
+      "title": "Na série mundialmente conhecida La Casa de Papel, qual o nome do irmão do Professor ?",
+      "description": "Netflix, Pipoca e Maratona, aooooo vida boa kkk ...",
+      "answer": 3,
+      "alternatives": [
+        "Rio",
+        "Moscou",
+        "Denver",
+        "Berlim"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/U4q2Ej2UEdq5mzpUCB/giphy.gif",
+      "image1" : "https://media.giphy.com/media/U4q2Ej2UEdq5mzpUCB/giphy.gif",
+      "title": "Essa é fácil rs ... Qual o nome do ícone Cult que roubou os corações de todos no último ano de 2020 ?",
+      "description": "Se sabe essa com certeza é meu ou minha amigo(a) =) !!!",
+      "answer": 1,
+      "alternatives": [
+        "Mandaloriano",
+        "Baby Yoda",
+        "Anakin Skywalker",
+        "Dart Vader"
       ]
     },
     {
