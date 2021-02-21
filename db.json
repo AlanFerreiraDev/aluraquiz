@@ -38,18 +38,34 @@
       "alternatives": [
         "Mandaloriano",
         "Baby Yoda",
-        "Anakin Skywalker",
+        "Chewbacca",
         "Dart Vader"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://media.giphy.com/media/lRjwXH9Thxz6DiWmyG/giphy.gif",
+      "image1" : "https://media.giphy.com/media/lRjwXH9Thxz6DiWmyG/giphy.gif",
+      "title": "Essa série pertence ao Multiverso Marvel, e está arrebentando no Disney+. Qual o nome da vizinha de Wanda Maximoff no seriado WandaVision ?",
+      "description": "A cidade de Westview nunca mais foi a mesma, depois do surto de Wanda =( ...",
+      "answer": 2,
+      "alternatives": [
+        "Dottie",
+        "Monica Rambeau",
+        "Agnes",
+        "Sra. Hart"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/Hd5LO7KVT6Dy1bRURA/giphy.gif",
+      "image1" : "https://media.giphy.com/media/Hd5LO7KVT6Dy1bRURA/giphy.gif",
+      "title": "Postulante a melhor série de 2020, O Gambito da Rainha se refere a uma jogada feita pela personagem principal, Elizabeth Harmon. Que jogada seria essa ?",
+      "description": "Essa é para quem joga Xadres hein ...",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+        "O movimento é sacrificar temporariamente um peão para obter o controle do centro do tabuleiro.",
+        "O movimento é andar com um peão duas casas na primeira jogada. ",
+        "O movimento é sacrificar o cavalo e apontar o bispo para a Rainha aplicando o cheque. ",
+        "O movimento é atacar com as torres e bispos, deixando os cavalos para a defesa do Rei. "
       ]
     }
   ],
